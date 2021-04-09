@@ -12,15 +12,9 @@ const App = () => {
           <Route exact path="/">
             <Redirect to="/login" />
           </Route>
-          <Route path="/login">
-            <Login />
-          </Route>
-          <Route path="/home">
-            <Home />
-          </Route>
-          <Route path="/confirm">
-            <Confirm />
-          </Route>
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/home" component={Home} />
+          <Route exact path="/confirm" component={Confirm} />
         </Switch>
       </BrowserRouter>
     </div>
